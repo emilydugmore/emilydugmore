@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emily Dugmore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: #f5f5f5;
+            color: #111111;
+            font-family: 'Manrope', sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* ── Header ─────────────────────────────────────────────────────── */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(245, 245, 245, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2.5rem;
+            height: 56px;
+        }
+
+        header h1 {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            color: #111111;
+        }
+
+        header h1 a:hover { color: #2563eb; }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 1.1rem;
+        }
+
+        .header-icons a {
+            color: #9ca3af;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+
+        .header-icons a:hover { color: #111111; }
+
+        /* ── Profile ─────────────────────────────────────────────────────── */
+        #profile {
+            max-width: 1400px;
+            margin: 4rem auto 3.5rem;
+            padding: 0 4rem;
+        }
+
+        #profile h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: #111111;
+        }
+
+        #profile p {
+            color: #111111;
+            font-weight: 300;
+            font-size: 1.1rem;
+            max-width: 700px;
+        }
+
+        /* ── Projects ────────────────────────────────────────────────────── */
+        #projects {
+            max-width: 1400px;
+            margin: 0 auto 5rem;
+            padding: 0 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.8rem;
+        }
+
+        .project {
+            display: flex;
+            gap: 2.5rem;
+            align-items: flex-start;
+        }
+
+        .project-image {
+            flex-shrink: 0;
+            width: 360px;
+            height: 240px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.2s;
+        }
+
+        .project-image:hover img { opacity: 0.8; }
+
+        .project-body { flex: 1; }
+
+        .project-body h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #111111;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .tag {
+            font-size: 0.72rem;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            padding: 0.15rem 0.55rem;
+            border: 1px solid rgba(0,0,0,0.15);
+            color: #6b7280;
+        }
+
+        .tag.module { border-color: rgba(37,99,235,0.4); color: #2563eb; }
+
+        .project-body p {
+            font-size: 1.05rem;
+            color: #111111;
+            font-weight: 300;
+        }
+
+        .project-links {
+            margin-top: 0.6rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            font-size: 0.85rem;
+            color: #2563eb;
+            letter-spacing: 0.04em;
+            transition: color 0.2s;
+        }
+
+        .project-links a:hover { color: #1d4ed8; }
+        .project-links a i { margin-right: 0.3rem; font-size: 0.72rem; }
+
+        /* ── Divider ─────────────────────────────────────────────────────── */
+        .divider {
+            border: none;
+            border-top: 1px solid rgba(0,0,0,0.08);
+        }
+
+        /* ── Responsive ──────────────────────────────────────────────────── */
+        @media (max-width: 768px) {
+            #profile, #projects { padding: 0 1.5rem; }
+            .project { flex-direction: column; }
+            .project-image { width: 100%; height: 220px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><a href="index.html">Emily Dugmore</a></h1>
+    <div class="header-icons">
+        <a href="https://github.com/emilydugmore" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:emilykathleendugmore@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+</header>
+
+<div id="profile">
+    <h2>Hello!</h2>
+    <p>
+        I'm a student at the Centre for Advanced Spatial Analysis (CASA) at University College London.
+        My work sits at the intersection of urban data science, geospatial analysis, and data visualisation.
+        I'm particularly interested in spatial inequalities and using open data to better understand cities and environments.
+        Here are some of the projects I've worked on.
+    </p>
+</div>
+
+<div id="projects">
+
+    <article class="project">
+        <a href="https://ssoubie.github.io/data_viz_air_quality_project/" target="_blank" class="project-image">
+            <img src="images/sensors.png" alt="Air Quality Monitoring" />
+        </a>
+        <div class="project-body">
+            <h3>Investigating Disparities in Global Air Quality Monitoring</h3>
+            <div class="project-meta">
+                <span class="tag">HTML Website</span>
+                <span class="tag module">CASA0029 – Urban Data Visualisation</span>
+            </div>
+            <p>This HTML-based website explores the spatial distribution of air quality sensors across the globe. The site uses interactive maps and charts to tell a research-driven story about the inequalities present in sensor coverage, and investigates potential drivers of these disparities. It highlights a stark divide in urban analytics and data accessibility between the Global North and Global South.</p>
+            <div class="project-links">
+                <a href="https://ssoubie.github.io/data_viz_air_quality_project/" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i>View Site</a>
+            </div>
+        </div>
+    </article>
+
+    <hr class="divider">
+
+    <article class="project">
+        <a href="https://emilydugmore.github.io/remote_sensing_portfolio/" target="_blank" class="project-image">
+            <img src="images/rs.png" alt="Remote Sensing Portfolio" />
+        </a>
+        <div class="project-body">
+            <h3>Remote Sensing Learning Portfolio</h3>
+            <div class="project-meta">
+                <span class="tag">HTML Portfolio</span>
+                <span class="tag module">CASA0023 – Remote Sensing Cities &amp; Environments</span>
+            </div>
+            <p>A nine-week learning diary documenting practical application of remote sensing techniques using Google Earth Engine. Topics covered include spectral indices, land cover classification, SAR analysis, and machine learning approaches to satellite imagery.</p>
+            <div class="project-links">
+                <a href="https://emilydugmore.github.io/remote_sensing_portfolio/" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i>View Portfolio</a>
+            </div>
+        </div>
+    </article>
+
+    <hr class="divider">
+
+    <article class="project">
+        <a href="pdfs/SDG_Pocket_Parks.pdf" target="_blank" class="project-image">
+            <img src="images/sdg.png" alt="Pocket Parks SDG Report" />
+        </a>
+        <div class="project-body">
+            <h3>Using Pocket Parks to Address Climate and Health SDG Goals in Arsenal</h3>
+            <div class="project-meta">
+                <span class="tag">PDF Report</span>
+                <span class="tag module">BPLN0114 – SDGs, Climate Action &amp; Spatial Planning</span>
+            </div>
+            <p>A spatial planning report exploring how pocket parks in the Arsenal area of London can contribute to climate resilience and public health Sustainable Development Goals. The analysis draws on open spatial data to assess green space coverage and identify priority locations for intervention.</p>
+            <div class="project-links">
+                <a href="pdfs/SDG_Pocket_Parks.pdf" target="_blank"><i class="fas fa-file-pdf"></i>View Report</a>
+            </div>
+        </div>
+    </article>
+
+    <hr class="divider">
+
+    <article class="project">
+        <a href="https://eckertniklasm.github.io/casa0028-assessment2/" target="_blank" class="project-image">
+            <img src="images/plotshare.jpg" alt="PlotShare" />
+        </a>
+        <div class="project-body">
+            <h3>PlotShare – Making London's Allotments a Shared Space and Resource</h3>
+            <div class="project-meta">
+                <span class="tag">Data Story</span>
+                <span class="tag module">CASA0028 – Designing Spatial Data Stories</span>
+            </div>
+            <p>An interactive data story examining the distribution and accessibility of allotments across London. The project explores how shared growing spaces could be reimagined as a community resource, addressing food insecurity and green space inequality across the city.</p>
+            <div class="project-links">
+                <a href="https://eckertniklasm.github.io/casa0028-assessment2/" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i>View Site</a>
+            </div>
+        </div>
+    </article>
+
+    <hr class="divider">
+
+    <article class="project">
+        <a href="https://emilydugmore.github.io/epc_interactive_map/" target="_blank" class="project-image">
+            <img src="images/epc.png" alt="EPC Energy Savings" />
+        </a>
+        <div class="project-body">
+            <h3>Potential Energy Savings across England and Wales</h3>
+            <div class="project-meta">
+                <span class="tag">Interactive Map</span>
+                <span class="tag module">CASA0007 – Quantitative Methods</span>
+                <span class="tag module">CASA0029 – Urban Data Visualisation</span>
+            </div>
+            <p>Using Energy Performance Certificate data, this project maps and models potential energy savings across England and Wales, identifying areas with the greatest opportunity for retrofit investment and highlighting the relationship between housing stock age and energy efficiency.</p>
+            <div class="project-links">
+                <a href="https://emilydugmore.github.io/epc_interactive_map/" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i>View Map</a>
+                <a href="pdfs/QM_Assignment.pdf" target="_blank"><i class="fas fa-file-pdf"></i>View Report</a>
+            </div>
+        </div>
+    </article>
+
+    <hr class="divider">
+
+    <article class="project">
+        <a href="https://emilydugmore.github.io/RSA_Service_Delivery_Map/" target="_blank" class="project-image">
+            <img src="images/rsa_service.png" alt="South Africa Service Delivery" />
+        </a>
+        <div class="project-body">
+            <h3>Municipal Service Delivery Performance in South Africa</h3>
+            <div class="project-meta">
+                <span class="tag">React App</span>
+            </div>
+            <p>A React-based interactive map visualising South African Census data on municipal service delivery. The app highlights spatial inequalities in access to water, sanitation, and electricity across municipalities, drawing on open government data to tell a story about infrastructure inequality.</p>
+            <div class="project-links">
+                <a href="https://emilydugmore.github.io/RSA_Service_Delivery_Map/" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i>View Map</a>
+            </div>
+        </div>
+    </article>
+
+</div>
+
+</body>
+</html>
